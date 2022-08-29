@@ -15,47 +15,61 @@
         <!-- List of questions and answers in an ordered list -->
         <dl>
             <dt>1. Name the three ways to declare a variable?</dt>            
-            <dd></dd>
+            <dd>var wordHere = "answer";</dd>
+            <dd>let wordHere = "answer";</dd>
+            <dd>const wordHere = "answer";</dd>
         </dl> 
         <br>
         <dl>
             <dt>2. Which of the three variable declarations should you avoid and why?</dt>            
-            <dd></dd>
+            <dd>var, because it is the old way of declaring a variable. It is prefered now to use the newer ways.</dd>
         </dl> 
         <br>
         <dl>
             <dt>3. What rules should you follow when naming variables?</dt>            
-            <dd></dd>
+            <dd>The name should only contain letters, digits or the symbols $ and _</dd>
+            <dd>The first character should not be a digit.</dd>
+            <dd>When using multiple words it should be written in camelCase or using one _</dd>
+            <dd>The name should be a clear name of what the variable is representing and have a clean, obvious meaning describing the data that it stores.</dd>
+            <dd>Agree on terms within your team and in your mind, for example if the team uses wordUser make sure you use anotherWordUser in variables.</dd>
         </dl> 
         <br>
         <dl>
             <dt>4. What should you look out for when using the + operator with numbers and strings?</dt>            
-            <dd></dd>
+            <dd>If + is applied to strings it concatenates them.</dd>
+            <dd>If there is a number being added to a string it converts the number into a string.</dd>
         </dl> 
         <br>
         <dl>
             <dt>5. How does the % operator work?</dt>            
-            <dd></dd>
+            <dd>% is the Modulus (Division Remainder).</dd>
+            <dd>The remainder operator returns the remainder left over when one operand is divided by a second operand.</dd>
         </dl> 
         <br>
         <dl>
             <dt>6. Explain the difference between == and ===.</dt>            
-            <dd></dd>
+            <dd>== non-strict equality operator. it compares the values of operands.</dd>
+            <dd>=== strict equality operator. It compares the values and data types of operands.</dd>
         </dl> 
         <br>
         <dl>
             <dt>7. When would you receive a NaN result?</dt>            
-            <dd></dd>
+            <dd>NaN represents a computational error.</dd>
+            <dd>It is a result of an incorrect or undefined mathematical operation.</dd>
+            <dd>console.log( "not a number" / 2 );</dd>
         </dl> 
         <br>
         <dl>
             <dt>8. How do you increment and decrement a number?</dt>            
-            <dd></dd>
+            <dd>++ increases a value of a variable by 1</dd>
+            <dd>-- decreases a value of a variable by 1</dd>
         </dl> 
         <br>
         <dl>
             <dt>9. Explain the difference between prefixing and post-fixing increment/decrement operators.</dt>            
-            <dd></dd>
+            <dd>If you use the ++ operator as a prefix like: ++var, the value of var is incremented by 1; then it returns the value.</dd>
+            <dd>If you use the ++ operator as a postfix like: var++, the original value of var is returned first; then var is incremented by 1.</dd>
+            
         </dl> 
         <br>
         <dl>
@@ -65,7 +79,7 @@
         <br>
         <dl>
             <dt>11. How do you log information to the console?</dt>            
-            <dd></dd>
+            <dd>console.log(information);</dd>
         </dl> 
         <br>
         <dl>
@@ -75,22 +89,41 @@
         <br>
         <dl>
             <dt>13. What are the eight data types in JavaScript?</dt>            
-            <dd></dd>
+            <dd><strong>Boolean</strong></dd>
+            <dd>Boolean is a primitive data type in javascript. Boolean data types consist of logical They consist of two possible values “true” or “false”.</dd>
+            <dd><strong>Null</strong></dd>
+            <dd>The null data type represents the value 0 it means this data type did not consist any data.</dd>
+            <dd><strong>Undefined</strong></dd>
+            <dd>A variable that has not been assigned a value has the value undefined.</dd>
+            <dd><strong>Number</strong></dd>
+            <dd>Number Data type is for numbers of any kind: integer or floating-point, integers are limited by ±253.</dd>
+            <dd><strong>BigInt</strong></dd>
+            <dd>BigInt data type is for integer numbers of arbitrary length. With BigInt, you can safely store and operate on large integers even beyond the safe integer limit for numbers.</dd>
+            <dd><strong>String</strong></dd>
+            <dd>String Data type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values.</dd>
+            <dd><strong>Symbol</strong></dd>
+            <dd>The symbol data type is used for giving unique identifiers.</dd>
+            <dd><strong>Object</strong></dd>
+            <dd>In JavaScript, objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.</dd>
         </dl> 
         <br>
         <dl>
             <dt>14. Which data type is NOT primitive?</dt>            
-            <dd></dd>
+            <dd>Object</dd>
         </dl> 
         <br>
         <dl>
             <dt>15. What is the relationship between null and undefined?</dt>            
-            <dd></dd>
+            <dd>Null is an object, whereas undefined is a type. Therefore, the null and undefined are falsy values.</dd>
+            <dd>Null is a value representing nothing, empty or value unknown. It makes a type of its own.</dd>
+            <dd>Undefined is a value that is not defined. It makes a type of its own, just like Null.</dd>
         </dl> 
         <br>
         <dl>
-            <dt>16. What is the difference between single, double, and backtick quotes for strings?</dt>            
-            <dd></dd>
+            <dt>16. What is the difference between single, double, and backtick quotes for strings?</dt>
+            <dd>You are able to use double quotes, single quotes or backtick quotes to create a string.</dd>
+            <dd>You can use single quotes in a string and if you have a quotation in that string, you can use / to escape the quotation in that string</dd>
+            <dd>You can use backtick quotes to embed.</dd>
         </dl> 
         <br>
         <dl>
@@ -100,7 +133,7 @@
         <br>
         <dl>
             <dt>18. Which type of quote lets you embed variables/expressions in a string?</dt>            
-            <dd></dd>
+            <dd>`` Backticks.</dd>
         </dl> 
         <br>
         <dl>
@@ -110,22 +143,39 @@
         <br>
         <dl>
             <dt>20. How do you escape characters in a string?</dt>            
-            <dd></dd>
+            <dd>/ before the quotations.</dd>
         </dl> 
         <br>
         <dl>
             <dt>21. What is the difference between the slice/substring/substr string methods?</dt>            
+            <dd><strong>Slice.</strong><dd>
+            <dd>It takes two parameters: the first parameter is the starting index, and the second one is the ending index, meaning the index of the character after the last character in the desired substring. If you leave the second one off, it will slice until the end of the string. </dd>
+            <dd><strong>Substring</strong></dd>
+            <dd></dd>
+            <dd>Substr</dd>
             <dd></dd>
         </dl> 
         <br>
         <dl>
             <dt>22. What are the three logical operators and what do they stand for?</dt>            
+            <dd><strong></strong></dd>
+            <dd></dd>
+            <dd><strong></strong></dd>
+            <dd></dd>
+            <dd><strong></strong></dd>
             <dd></dd>
         </dl> 
         <br>
         <dl>
             <dt>23. What are the comparison operators?</dt>            
-            <dd></dd>
+            <dd><strong>> <</strong></dd>
+            <dd>Greater than and less than.</dd>
+            <dd><strong>>= <=</strong></dd>
+            <dd>Greater than or equals and Less than or equals</dd>
+            <dd><strong>==</strong></dd>
+            <dd>Equals</dd>
+            <dd><strong>!=</strong></dd>
+            <dd>Not equals</dd>
         </dl> 
         <br>
         <dl>
