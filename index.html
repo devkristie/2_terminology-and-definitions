@@ -18,12 +18,12 @@
             <dd>var wordHere = "answer";</dd>
             <dd>let wordHere = "answer";</dd>
             <dd>const wordHere = "answer";</dd>
-        </dl> 
+        </dl>
         <br>
         <dl>
             <dt>2. Which of the three variable declarations should you avoid and why?</dt>            
-            <dd>var, because it is the old way of declaring a variable. It is prefered now to use the newer ways.</dd>
-        </dl> 
+            <dd>var, because it is the old way of declaring a variable. It is prefered now to use the newer ways. It is a global scope.</dd>
+        </dl>
         <br>
         <dl>
             <dt>3. What rules should you follow when naming variables?</dt>            
@@ -32,23 +32,28 @@
             <dd>When using multiple words it should be written in camelCase or using one _</dd>
             <dd>The name should be a clear name of what the variable is representing and have a clean, obvious meaning describing the data that it stores.</dd>
             <dd>Agree on terms within your team and in your mind, for example if the team uses wordUser make sure you use anotherWordUser in variables.</dd>
-        </dl> 
+        </dl>
         <br>
         <dl>
-            <dt>4. What should you look out for when using the + operator with numbers and strings?</dt>            
+            <dt>4. What should you look out for when using the + operator with numbers and strings?</dt>
+            <dd>Using + operator with numbers uses additional mathematics which add them together.</dd>          
             <dd>If + is applied to strings it concatenates them.</dd>
             <dd>If there is a number being added to a string it converts the number into a string.</dd>
-        </dl> 
+        </dl>
         <br>
         <dl>
-            <dt>5. How does the % operator work?</dt>            
+            <dt>5. How does the % operator work?</dt>
             <dd>% is the Modulus (Division Remainder).</dd>
             <dd>The remainder operator returns the remainder left over when one operand is divided by a second operand.</dd>
+            <dd>let num1 = 10; <br>
+                let num2 = 3; <br>
+                let result = num1 % num2; <br>
+                console.log(result);</dd>
         </dl> 
         <br>
         <dl>
             <dt>6. Explain the difference between == and ===.</dt>            
-            <dd>== non-strict equality operator. it compares the values of operands.</dd>
+            <dd>== is a non-strict equality operator. it compares the values of operands.</dd>
             <dd>=== strict equality operator. It compares the values and data types of operands.</dd>
         </dl> 
         <br>
@@ -56,6 +61,7 @@
             <dt>7. When would you receive a NaN result?</dt>            
             <dd>NaN represents a computational error.</dd>
             <dd>It is a result of an incorrect or undefined mathematical operation.</dd>
+            <!--<dd>Anything that can not be interpreted as a number by removing the quotes will evaluate as NaN.</dd>-->
             <dd>console.log( "not a number" / 2 );</dd>
         </dl> 
         <br>
@@ -69,12 +75,12 @@
             <dt>9. Explain the difference between prefixing and post-fixing increment/decrement operators.</dt>            
             <dd>If you use the ++ operator as a prefix like: ++var, the value of var is incremented by 1; then it returns the value.</dd>
             <dd>If you use the ++ operator as a postfix like: var++, the original value of var is returned first; then var is incremented by 1.</dd>
-            
         </dl> 
         <br>
         <dl>
             <dt>10. What is operator precedence and how is it handled in JS?</dt>            
-            <dd></dd>
+            <dd>The precedence of an operator specifies how "tightly" it binds two expressions together. For example, in the expression 1 + 5 * 3, the answer is 16 and not 18 because the multiplication ("*") operator has a higher precedence than the addition ("+") operator. Parentheses may be used to force precedence, if necessary. For instance: (1 + 5) * 3 evaluates to 18.</dd>
+            <dd>https://medium.com/weekly-webtips/what-is-operator-precedence-in-javascript-c163a9f4941a</dd>
         </dl> 
         <br>
         <dl>
@@ -84,23 +90,23 @@
         <br>
         <dl>
             <dt>12. What does unary plus operator do to string representations of integers?</dt>            
-            <dd></dd>
+            <dd>Tries to convert the operand into a number. If it is + it is positive, if it is - it is negative.</dd>
         </dl> 
         <br>
         <dl>
             <dt>13. What are the eight data types in JavaScript?</dt>            
+            <dd><strong>String</strong></dd>
+            <dd>String Data type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values.</dd>
+            <dd><strong>Number</strong></dd>
+            <dd>Number Data type is for numbers of any kind: integer or floating-point, integers are limited by ±253.</dd>
             <dd><strong>Boolean</strong></dd>
             <dd>Boolean is a primitive data type in javascript. Boolean data types consist of logical They consist of two possible values “true” or “false”.</dd>
+            <dd><strong>BigInt</strong></dd>
+            <dd>BigInt data type is for integer numbers of arbitrary length. With BigInt, you can safely store and operate on large integers even beyond the safe integer limit for numbers.</dd>
             <dd><strong>Null</strong></dd>
             <dd>The null data type represents the value 0 it means this data type did not consist any data.</dd>
             <dd><strong>Undefined</strong></dd>
             <dd>A variable that has not been assigned a value has the value undefined.</dd>
-            <dd><strong>Number</strong></dd>
-            <dd>Number Data type is for numbers of any kind: integer or floating-point, integers are limited by ±253.</dd>
-            <dd><strong>BigInt</strong></dd>
-            <dd>BigInt data type is for integer numbers of arbitrary length. With BigInt, you can safely store and operate on large integers even beyond the safe integer limit for numbers.</dd>
-            <dd><strong>String</strong></dd>
-            <dd>String Data type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values.</dd>
             <dd><strong>Symbol</strong></dd>
             <dd>The symbol data type is used for giving unique identifiers.</dd>
             <dd><strong>Object</strong></dd>
@@ -128,42 +134,63 @@
         <br>
         <dl>
             <dt>17. What is the term for embedding variables/expressions in a string?</dt>            
-            <dd></dd>
+            <dd>String literal</dd>
+            <dd>Template literal</dd>
+            <dd>Interpolation</dd>
         </dl> 
         <br>
         <dl>
             <dt>18. Which type of quote lets you embed variables/expressions in a string?</dt>            
             <dd>`` Backticks.</dd>
-        </dl> 
+        </dl>
         <br>
         <dl>
-            <dt>19. How do you embed variables/expressions in a string?</dt>            
-            <dd></dd>
+            <dt>19. How do you embed variables/expressions in a string?</dt>
+            <dd>let user = { <br>
+                    name: "Kristie", <br>
+                    surname: "Larke", <br>
+                    age: "30" <br>
+                }
+            </dd>        
+            <dd>console.log(`This is a string that ${user.name} made.`);</dd>
         </dl> 
         <br>
         <dl>
             <dt>20. How do you escape characters in a string?</dt>            
-            <dd>/ before the quotations.</dd>
+            <dd>\ before the quotations.</dd>
         </dl> 
         <br>
         <dl>
             <dt>21. What is the difference between the slice/substring/substr string methods?</dt>            
-            <dd><strong>Slice.</strong><dd>
-            <dd>It takes two parameters: the first parameter is the starting index, and the second one is the ending index, meaning the index of the character after the last character in the desired substring. If you leave the second one off, it will slice until the end of the string. </dd>
-            <dd><strong>Substring</strong></dd>
-            <dd></dd>
-            <dd>Substr</dd>
-            <dd></dd>
+            <dd><strong>slice()</strong><dd>
+            <dd>The slice() method extracts a part of a string.</dd>
+            <dd>The slice() method returns the extracted part in a new string.</dd>
+            <dd>The slice() method does not change the original string.</dd>
+            <dd><strong>substring()</strong></dd>
+            <dd>The substring() method extracts characters, between two indices (positions), from a string, and returns the substring.</dd>
+            <dd>The substring() method extracts characters from start to end (exclusive).</dd>
+            <dd>The substring() method does not change the original string.</dd>
+            <dd><strong>substr()</strong></dd>
+            <dd>The substr() method extracts a part of a string.</dd>
+            <dd>The substr() method begins at a specified position, and returns a specified number of characters.</dd>
+            <dd>The substr() method does not change the original string.</dd>
+            <dd>https://masteringjs.io/tutorials/fundamentals/substring-vs-slice</dd>
         </dl> 
         <br>
         <dl>
             <dt>22. What are the three logical operators and what do they stand for?</dt>            
-            <dd><strong></strong></dd>
-            <dd></dd>
-            <dd><strong></strong></dd>
-            <dd></dd>
-            <dd><strong></strong></dd>
-            <dd></dd>
+            <dd><strong>|| (OR)</strong></dd>
+            <dd>The “OR” operator is represented with two vertical line symbols: <br>
+                result = a || b; <br>
+                finds the first truthy value</dd>
+            <dd><strong>&& (AND)</strong></dd>
+            <dd>The AND operator is represented with two ampersands &&: <br>
+                result = a && b; <br>
+                finds the first falsy value</dd>
+            <dd><strong>! (NOT)</strong></dd>
+            <dd>The boolean NOT operator is represented with an exclamation sign !. <br>
+                result = !value; <br>
+                The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.</dd>
         </dl> 
         <br>
         <dl>
@@ -180,67 +207,144 @@
         <br>
         <dl>
             <dt>24. What are truthy and falsy values?</dt>            
-            <dd></dd>
+            <dd>Truthy values are expressions that evaluate to the boolean value of true, and falsy values are expressions that evaluate to the boolean value of false.</dd>
         </dl> 
         <br>
         <dl>
             <dt>25. What are the falsy values in JavaScript?</dt>            
-            <dd></dd>
+            <dd>Falsy expressions: False, NaN, Undefined, Null, Empty String (""), 0.</dd>
         </dl> 
         <br>
         <dl>
             <dt>26. What are conditionals?</dt>            
-            <dd></dd>
+            <dd>Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run.<br>
+                There are multiple different types of conditionals in JavaScript including:<br>
+                “If” statements: where if a condition is true it is used to specify execution for a block of code.<br>
+                “Else” statements: where if the same condition is false it specifies the execution for a block of code.<br>
+                “Else if” statements: this specifies a new test if the first condition is false.</dd>
+                <dd>Listed below are some of the conditional statements frequently used in javascript.<br>
+                    Break<br>
+                    Continue<br>
+                    For<br>
+                    For...in<br>
+                    If...else<br>
+                    New<br>
+                    Return<br>
+                    Var<br>
+                    While<br>
+                    With
+                </dd>
+                <dd>https://www.educba.com/conditional-statements-in-javascript/</dd>
         </dl> 
         <br>
         <dl>
-            <dt>27. What is the syntax for an if/else conditional?</dt>            
-            <dd></dd>
+            <dt>27. What is the syntax for an if/else conditional?</dt>          
+            <dd>if (hour < 18) { <br>
+                    greeting = "hello"; <br>
+                } <br>
+                else if (hour < 20) { <br>
+                    greeting = "hello again"; <br>
+                } <br>
+                else { <br>
+                    greeting = "hi"; <br>
+                }</dd>
         </dl> 
         <br>
         <dl>
             <dt>28. What is the syntax for a switch statement?</dt>            
-            <dd></dd>
+            <dd>switch (new.Date().getDay()) {
+                case 0:
+                  day = "Monday";
+                  break;
+                case 1:
+                  day = "Saturday";
+                  break;
+                default:
+                  day = "Sunday";
+              }</dd>
         </dl> 
         <br>
         <dl>
             <dt>29. What is the syntax for a ternary operator?</dt>            
-            <dd></dd>
+            <dd>let customer = { <br>
+                name: "Joe", <br>
+                age: 15 <br>
+            } <br>
+            if (customer.age >= 18) { <br>
+                user_is_right_age = true; <br>
+            } else { <br>
+                user_is_right_age = false; <br>
+            }
+            <br><br>
+            let isTheNightTime = true; <br>
+            if (isTheNightTime) { <br>
+                console.log("Turn on the light!"); <br>
+            } else { <br>
+                console.log("Turn of the light!"); <br>
+            } <br>
+            isTheNightTime ? console.log("turn on the light") : console.log("turn of the light!");
+        </dd>
         </dl> 
         <br>
         <dl>
             <dt>30. What is nesting?</dt>            
-            <dd></dd>
+            <dd>You can have a function inside a function. You can have a veriable inside an if statement. You can have an object inside an object. You can have an array inside of an array.</dd>
+            <dd>const plantNeedsWater = function (day) { <br>
+                if (day === `Wednesday`) { <br>
+                    return true; <br>
+                } else { <br>
+                    return false; <br>
+                } <br>
+            }; <br>
+            plantNeedsWater(`Tuesday`); <br>
+            console.log(plantNeedsWater(`Tuesday`)); <br>
+            </dd>
         </dl> 
         <br>
         <dl>
             <dt>31. What are functions useful for?</dt>            
-            <dd></dd>
+            <dd>Functions allow you to store a piece of code that does a single task inside a defined block and then call that code whenever you need it using a single short command. Rather than having to type out the same code multiple times.</dd>
         </dl> 
         <br>
         <dl>
             <dt>32. How do you invoke a function?</dt>            
-            <dd></dd>
+            <dd>function nameHere() { <br>
+                    console.log(hello); <br>
+                } <br>
+                nameHere();
+            </dd>
         </dl> 
         <br>
         <dl>
             <dt>33. What are anonymous functions?</dt>            
-            <dd></dd>
+            <dd>It is a function that does not have a name represented. In order to invoke the function with no name you need to store it in a variable.</dd>
+            <dd>let functionVariable = function() { <br>
+                console.log("hello"); <br>
+                }; <br>
+                functionVariable(); <br>
+            </dd>
         </dl> 
         <br>
         <dl>
             <dt>34. What is function scope?</dt>            
-            <dd></dd>
+            <dd>The variables which are declared inside the function body. That is a local function or function-level variable. We can not use them outside the function block.</dd>
         </dl> 
         <br>
         <dl>
             <dt>35. What are return values?</dt>            
-            <dd></dd>
+            <dd>JavaScript passes a value from a function back to the code that called it by using the return statement. The value to be returned is specified in the return. That value can be a constant value, a variable, or a calculation where the result of the calculation is returned.</dd>
         </dl> 
         <br>
         <dl>
-            <dt>36. What are arrow functions?</dt>            
-            <dd></dd>
+            <dt>36. What are arrow functions?</dt>
+            <dd>A shorter notation for writing functions. <br>
+                let sum = (a, b) => a + b; <br>
+                This is a shorter form of: <br>
+                let sum = function(a, b) { <br>
+                    return a + b; <br>
+                }; <br>
+                alert( sum(1, 2) );<br>
+            </dd>
         </dl> 
         <br>
     </main>
